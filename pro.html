@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Strategic Investment | Pro-College Narrative</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+    :root { ... }
+
+    /* ADD THIS BLOCK HERE */
+    .btn-back {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 9999; 
+        background: white;
+        color: #333;
+        padding: 8px 16px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        transition: all 0.2s ease;
+        border: 1px solid #eee;
+    }
+
+    .btn-back:hover {
+        background: #f8f9fa;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        text-decoration: none;
+        color: #333;
+    }
+    /* END OF ADDITION */
+
+    body { ... }
+    /* ... rest of your CSS ... */
+
+        :root { --public: #2c7bb6; --highlight: #27ae60; }
+        body { font-family: 'Lora', serif; background: #f8f9fa; color: #2c3e50; }
+        .sticky-container { display: flex; flex-wrap: wrap; }
+        .narrative { width: 40%; padding: 0 3%; z-index: 2; }
+        .visual { width: 60%; position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 1; }
+        .step { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; opacity: 0.1; transition: opacity 0.5s; padding: 20px; border-bottom: 1px solid #eee; }
+        .step.active { opacity: 1; }
+        .chart-box { width: 95%; height: 75vh; background: white; border: 1px solid #dee2e6; border-radius: 8px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); position: relative; }
+        .hint-box { font-size: 0.85rem; background: #eef7f2; padding: 12px; border-radius: 6px; margin-top: 15px; border-left: 4px solid var(--highlight); }
+        .takeaway { font-weight: bold; color: var(--public); margin-bottom: 5px; }
+        .explanation-block { font-size: 0.9rem; margin-top: 15px; padding: 10px; border-top: 1px solid #eee; color: #555; }
+        .explanation-block b { color: #2c3e50; }
+        .axis-label { font-size: 13px; fill: #666; font-family: sans-serif; }
+        .tooltip { position: absolute; padding: 10px; background: rgba(0,0,0,0.85); color: white; border-radius: 4px; pointer-events: none; font-size: 12px; z-index: 2000; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="btn-back">← Back</a>
+    <div class="sticky-container">
+        <div class="narrative">
+            <div class="step active" data-step="0">
+                <h2 class="text-primary">Claim: Degrees Drive Income</h2>
+                <p class="takeaway">Higher education remains the most consistent predictor of lifetime earnings.</p>
+                <div class="hint-box"><strong>What to look for:</strong> Look at the significant earnings jump that occurs at the Bachelor's degree level compared to High School.</div>
+                <div class="explanation-block">
+                    <p><b>Data tells us:</b> Weekly earnings scale significantly with every level of educational attainment achieved. 
+                    <b>Narrative role:</b> This supports the claim that education increases earnings and serves as a reliable engine for financial growth.</p>
+                </div>
+            </div>
+            <div class="step" data-step="1">
+                <h2 class="text-primary">Claim: Investment Scales with Reward</h2>
+                <p class="takeaway">Higher tuition often leads to higher-paying career networks.</p>
+                <div class="hint-box"><strong>What to look for:</strong> Follow the trend line to see how increased tuition generally aligns with higher mid-career salaries.</div>
+                <div class="explanation-block">
+                    <p><b>Data tells us:</b> A positive correlation exists between the cost of tuition and the resulting median earnings of graduates. 
+                    <b>Narrative role:</b> This demonstrates that high-cost institutions often provide strong ROI through access to high-earning career paths.</p>
+                </div>
+            </div>
+            <div class="step" data-step="2">
+                <h2 class="text-primary">Where College Earnings Are Strongest</h2>
+                <p class="takeaway">Earnings outcomes vary significantly by regional economic hub.</p>
+                <div class="hint-box"><strong>What to look for:</strong> Darker tiles indicate states where institutions report higher average post-college earnings.</div>
+                <div class="explanation-block">
+                    <p><b>Data tells us:</b> Coastal and industrial hubs show significantly higher average post-college earnings than other regions. 
+                    <b>Narrative role:</b> This highlights how geography matters, suggesting that strategic choice of location makes college a more valuable investment.</p>
+                </div>
+            </div>
+            <div class="step" data-step="3">
+                <h2 class="text-primary">Claim: Wealth Accelerators Exist</h2>
+                <p class="takeaway">Strategic choices can yield massive ROI ratios.</p>
+                <div class="hint-box"><strong>What to look for:</strong> The color intensity indicates the efficiency of the degree; darker bars show higher ROI per dollar spent.</div>
+                <div class="explanation-block">
+                    <p><b>Data tells us:</b> Certain institutions produce graduates with earnings that vastly exceed the initial cost of tuition. 
+                    <b>Narrative role:</b> This proves that some institutions provide an exceptional ROI, making the degree a powerful wealth accelerator.</p>
+                </div>
+            </div>
+            <div class="step" data-step="4">
+                <h2 class="text-primary">Claim: Completion is a Safety Net</h2>
+                <p class="takeaway">Graduation rates protect against the burden of student debt.</p>
+                <div class="hint-box"><strong>What to look for:</strong> Observe how schools with higher graduation rates (further right) tend to have larger bubbles.</div>
+                <div class="explanation-block">
+                    <p><b>Data tells us:</b> Higher graduation rates are strongly linked to higher median earnings and manageable debt-to-income ratios. 
+                    <b>Narrative role:</b> This emphasizes that completion matters; choosing a school that successfully graduates its students is a critical safety net for the investment.</p>
+                </div>
+            </div>
+            <div class="step" data-step="5">
+                <h2 class="text-primary">Claim: Public Value is the Frontier</h2>
+                <p class="takeaway">The best value is found where low cost meets high market demand.</p>
+                <div class="hint-box"><strong>What to look for:</strong> Look at the institutions in the top-left quadrant—these represent the "Optimal Value" zone.</div>
+                <div class="explanation-block">
+                    <p><b>Data tells us:</b> Many public institutions offer high earnings for a fraction of the cost of private competitors. 
+                    <b>Narrative role:</b> This reinforces the idea that strategic choice—prioritizing public value—is what makes college a successful financial decision.</p>
+                </div>
+            </div>
+        </div>
+        <div class="visual">
+            <div class="chart-box" id="chart-container">
+                <svg id="pro-svg"></svg>
+            </div>
+        </div>
+    </div>
+    <div class="tooltip" id="tt" style="opacity:0"></div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+        const colors = { Public: "#2c7bb6", Nonprofit: "#88419d", ForProfit: "#d7191c", Neutral: "#ccc", Highlight: "#27ae60" };
+        const fDol = d3.format("$,.0f"), fK = d3.format("$.2s"), fPct = d3.format(".0%");
+        let dataBls = [], dataCol = [], stateStats = [];
+
+        async function init() {
+            const [b, c] = await Promise.all([d3.csv("data/bls.csv"), d3.csv("data/colleges.csv")]);
+            dataBls = b.map(d => ({ label: d.education, val: +d.earnings }));
+            dataCol = c.map(d => ({
+                name: d.INSTNM, state: d.STABBR,
+                type: d.CONTROL == 1 ? "Public" : (d.CONTROL == 2 ? "Nonprofit" : "For-Profit"),
+                tuit: +d.TUITIONFEE_IN, earn: +d.MD_EARN_WNE_P10,
+                debt: +d.DEBT_MDN || 0, grad: +d.C150_4,
+                roi: +d.MD_EARN_WNE_P10 / (+d.TUITIONFEE_IN || 1)
+            })).filter(d => d.earn > 0);
+            const nested = d3.groups(dataCol, d => d.state);
+            stateStats = nested.map(([state, values]) => ({ state, avgEarn: d3.mean(values, v => v.earn), count: values.length }));
+            setupObserver();
+            draw(0);
+        }
+
+        function draw(step) {
+            const container = d3.select("#chart-container");
+            const fullW = container.node().clientWidth, fullH = container.node().clientHeight;
+            const margin = { top: 60, right: 40, bottom: 80, left: 160 };
+            const w = fullW - margin.left - margin.right, h = fullH - margin.top - margin.bottom;
+            const svg = d3.select("#pro-svg").attr("width", fullW).attr("height", fullH);
+            svg.selectAll("*").remove();
+            const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+            const addLabels = (xl, yl) => {
+                g.append("text").attr("class", "axis-label").attr("x", w/2).attr("y", h + 50).attr("text-anchor", "middle").text(xl);
+                g.append("text").attr("class", "axis-label").attr("transform", "rotate(-90)").attr("y", -110).attr("x", -h/2).attr("text-anchor", "middle").text(yl);
+            };
+
+            if (step === 0) {
+                const x = d3.scaleLinear().domain([0, d3.max(dataBls, d => d.val)]).range([0, w]);
+                const y = d3.scaleBand().domain(dataBls.map(d => d.label)).range([0, h]).padding(0.3);
+                g.append("g").attr("transform", `translate(0,${h})`).call(d3.axisBottom(x).tickFormat(fK));
+                g.append("g").call(d3.axisLeft(y));
+                g.selectAll("rect").data(dataBls).enter().append("rect").attr("y", d => y(d.label)).attr("height", y.bandwidth()).attr("fill", colors.Public).attr("width", d => x(d.val));
+                addLabels("Weekly Earnings ($)", "Education Level");
+            } else if (step === 1) {
+                const x = d3.scaleLinear().domain([0, d3.max(dataCol, d => d.tuit)]).range([0, w]);
+                const y = d3.scaleLinear().domain([0, d3.max(dataCol, d => d.earn)]).range([h, 0]);
+                g.append("g").attr("transform", `translate(0,${h})`).call(d3.axisBottom(x).tickFormat(fK));
+                g.append("g").call(d3.axisLeft(y).tickFormat(fK));
+                g.selectAll("circle").data(dataCol).enter().append("circle").attr("cx", d => x(d.tuit)).attr("cy", d => y(d.earn)).attr("r", 3).attr("fill", colors.Public).attr("opacity", 0.4);
+                addLabels("Annual Tuition ($)", "Post-Graduation Earnings ($)");
+            } else if (step === 2) {
+                const grid = [
+                    {state:"AK", col:0, row:0}, {state:"ME", col:10, row:0}, {state:"VT", col:9, row:1}, {state:"NH", col:10, row:1},
+                    {state:"WA", col:1, row:2}, {state:"ID", col:2, row:2}, {state:"MT", col:3, row:2}, {state:"ND", col:4, row:2}, {state:"MN", col:5, row:2}, {state:"IL", col:6, row:2}, {state:"WI", col:7, row:2}, {state:"MI", col:8, row:2}, {state:"NY", col:9, row:2}, {state:"MA", col:10, row:2},
+                    {state:"OR", col:1, row:3}, {state:"NV", col:2, row:3}, {state:"WY", col:3, row:3}, {state:"SD", col:4, row:3}, {state:"IA", col:5, row:3}, {state:"IN", col:6, row:3}, {state:"OH", col:7, row:3}, {state:"PA", col:8, row:3}, {state:"NJ", col:9, row:3}, {state:"CT", col:10, row:3}, {state:"RI", col:11, row:3},
+                    {state:"CA", col:1, row:4}, {state:"UT", col:2, row:4}, {state:"CO", col:3, row:4}, {state:"NE", col:4, row:4}, {state:"MO", col:5, row:4}, {state:"KY", col:6, row:4}, {state:"WV", col:7, row:4}, {state:"MD", col:8, row:4}, {state:"DE", col:9, row:4},
+                    {state:"AZ", col:2, row:5}, {state:"NM", col:3, row:5}, {state:"KS", col:4, row:5}, {state:"AR", col:5, row:5}, {state:"TN", col:6, row:5}, {state:"VA", col:7, row:5}, {state:"NC", col:8, row:5}, {state:"DC", col:9, row:5},
+                    {state:"OK", col:4, row:6}, {state:"LA", col:5, row:6}, {state:"MS", col:6, row:6}, {state:"AL", col:7, row:6}, {state:"SC", col:8, row:6},
+                    {state:"HI", col:0, row:7}, {state:"TX", col:4, row:7}, {state:"FL", col:9, row:7}, {state:"GA", col:8, row:7}
+                ];
+                const tileSize = Math.min(w / 12, h / 8);
+                const colorScale = d3.scaleSequential(d3.interpolateBlues).domain([d3.min(stateStats, d => d.avgEarn), d3.max(stateStats, d => d.avgEarn)]);
+                const mapG = g.append("g").attr("transform", `translate(${(w - (tileSize * 12)) / 2}, 0)`);
+                const tiles = mapG.selectAll(".state-tile").data(grid).enter().append("g").attr("transform", d => `translate(${d.col * tileSize}, ${d.row * tileSize})`);
+                tiles.append("rect").attr("width", tileSize - 2).attr("height", tileSize - 2).attr("fill", d => {
+                    const s = stateStats.find(v => v.state === d.state);
+                    return s ? colorScale(s.avgEarn) : "#eee";
+                });
+                tiles.append("text").attr("x", tileSize / 2).attr("y", tileSize / 2).attr("dy", "0.35em").attr("text-anchor", "middle").attr("font-size", tileSize * 0.3).text(d => d.state);
+                svg.append("text").attr("class", "axis-label").attr("x", fullW/2).attr("y", fullH - 20).attr("text-anchor", "middle").text("Average Earnings ($)");
+            } else if (step === 3) {
+                const top = dataCol.sort((a,b) => b.roi - a.roi).slice(0, 10);
+                const x = d3.scaleLinear().domain([0, d3.max(top, d => d.roi)]).range([0, w]);
+                const y = d3.scaleBand().domain(top.map(d => d.name)).range([0, h]).padding(0.4);
+                g.append("g").attr("transform", `translate(0,${h})`).call(d3.axisBottom(x));
+                g.append("g").call(d3.axisLeft(y));
+                g.selectAll("rect").data(top).enter().append("rect").attr("y", d => y(d.name)).attr("height", y.bandwidth()).attr("fill", colors.Highlight).attr("width", d => x(d.roi));
+                addLabels("Earnings-to-Tuition Ratio", "Institution");
+            } else if (step === 4) {
+                const x = d3.scaleLinear().domain([0, 1]).range([0, w]);
+                const y = d3.scaleLinear().domain([0, d3.max(dataCol, d => d.earn)]).range([h, 0]);
+                g.append("g").attr("transform", `translate(0,${h})`).call(d3.axisBottom(x).tickFormat(fPct));
+                g.append("g").call(d3.axisLeft(y).tickFormat(fK));
+                g.selectAll("circle").data(dataCol).enter().append("circle").attr("cx", d => x(d.grad)).attr("cy", d => y(d.earn)).attr("r", 4).attr("fill", colors.Public).attr("opacity", 0.4);
+                addLabels("Graduation Rate (%)", "Earnings ($)");
+            } else if (step === 5) {
+                const x = d3.scaleLinear().domain([0, d3.max(dataCol, d => d.tuit)]).range([0, w]);
+                const y = d3.scaleLinear().domain([0, d3.max(dataCol, d => d.earn)]).range([h, 0]);
+                g.append("g").attr("transform", `translate(0,${h})`).call(d3.axisBottom(x).tickFormat(fK));
+                g.append("g").call(d3.axisLeft(y).tickFormat(fK));
+                g.selectAll("circle").data(dataCol).enter().append("circle").attr("cx", d => x(d.tuit)).attr("cy", d => y(d.earn)).attr("r", 4).attr("fill", d => d.tuit < 20000 && d.earn > 50000 ? colors.Highlight : colors.Neutral).attr("opacity", 0.6);
+                addLabels("Tuition ($)", "Earnings ($)");
+            }
+        }
+
+        function setupObserver() {
+            const obs = new IntersectionObserver(entries => {
+                entries.forEach(e => { if(e.isIntersecting) { d3.selectAll(".step").classed("active", false); d3.select(e.target).classed("active", true); draw(+e.target.dataset.step); }});
+            }, { threshold: 0.6 });
+            document.querySelectorAll(".step").forEach(s => obs.observe(s));
+        }
+        init();
+    </script>
+</body>
+</html>

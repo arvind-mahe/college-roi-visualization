@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Financial Risk | Anti-College Narrative</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+    :root { ... }
+
+    /* ADD THIS BLOCK HERE */
+    .btn-back {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 9999; 
+        background: white;
+        color: #333;
+        padding: 8px 16px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        transition: all 0.2s ease;
+        border: 1px solid #eee;
+    }
+
+    .btn-back:hover {
+        background: #f8f9fa;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        text-decoration: none;
+        color: #333;
+    }
+    /* END OF ADDITION */
+
+    body { ... }
+    /* ... rest of your CSS ... */
+
+        :root { --danger: #d7191c; }
+        body { font-family: 'Lora', serif; background: #fffcfc; color: #2c3e50; }
+        .sticky-container { display: flex; flex-wrap: wrap; }
+        .narrative { width: 40%; padding: 0 3%; order: 2; }
+        .visual { width: 60%; position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; order: 1; }
+        .step { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; opacity: 0.1; transition: opacity 0.5s; padding: 20px; border-bottom: 1px solid #f8d7da; }
+        .step.active { opacity: 1; }
+        .chart-box { width: 95%; height: 75vh; background: white; border: 1px solid #f8d7da; border-radius: 8px; padding: 25px; box-shadow: 0 4px 12px rgba(139,0,0,0.08); position: relative; }
+        .hint-box { font-size: 0.85rem; background: #fff5f5; padding: 12px; border-radius: 6px; margin-top: 15px; border-left: 4px solid var(--danger); color: #721c24; }
+        .takeaway { font-weight: bold; color: var(--danger); margin-bottom: 5px; }
+        .explanation-block { font-size: 0.9rem; margin-top: 15px; padding: 10px; border-top: 1px solid #f8d7da; color: #555; }
+        .axis-label { font-size: 12px; fill: #666; font-family: sans-serif; }
+        .chart-title { font-size: 16px; font-weight: bold; fill: #2c3e50; }
+        .chart-subtitle { font-size: 12px; fill: #666; }
+        .tooltip { position: absolute; padding: 8px; background: rgba(0,0,0,0.8); color: white; border-radius: 4px; pointer-events: none; font-size: 12px; z-index: 2000; visibility: hidden; }
+        .annotation { font-size: 11px; font-style: italic; fill: #d7191c; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="btn-back">← Back</a>
+    <div class="sticky-container">
+        <div class="narrative">
+            <div class="step active" data-step="0">
+                <h2 class="text-danger">Claim: Debt is Scaling Uncontrollably</h2>
+                <p class="takeaway">Student debt has outpaced nearly every other economic indicator.</p>
+                <div class="explanation-block">
+                    <p>The data reveals a steep, unrelenting climb in national student loan balances that has tripled in less than two decades. This suggests that the cost of entry into the professional class is scaling at a rate that far exceeds typical inflationary growth or wage gains.</p>
+                </div>
+            </div>
+            <div class="step" data-step="1">
+                <h2 class="text-danger">Year-to-Year Student Debt Change</h2>
+                <p class="takeaway">The rate of borrowing shows no signs of stabilizing.</p>
+                <div class="explanation-block">
+                    <p>Notably, the national balance continues to expand by tens of billions of dollars annually, even during periods of economic volatility. This consistent upward pressure indicates a structural reliance on borrowing that persists regardless of market conditions.</p>
+                </div>
+            </div>
+            <div class="step" data-step="2">
+                <h2 class="text-danger">Claim: Borrowers are Struggling to Repay</h2>
+                <p class="takeaway">Delinquency is a symptom of an overpriced product.</p>
+                <div class="explanation-block">
+                    <p>A clear pattern of persistent delinquency emerges, showing that a significant segment of borrowers remains unable to meet their repayment obligations. This baseline of financial distress suggests that for many, the realized return on their degree is insufficient to cover its upfront cost.</p>
+                </div>
+            </div>
+            <div class="step" data-step="3">
+                <h2 class="text-danger">Claim: Borrowing Without Completion</h2>
+                <p class="takeaway">The "Worst Case Scenario" is becoming common.</p>
+                <div class="explanation-block">
+                    <p>The concentration of risk is most visible in institutions where high median debt is decoupled from graduation success. Importantly, this "trap" leaves students with the liability of professional-level debt without the credential required to pay it off.</p>
+                </div>
+            </div>
+            <div class="step" data-step="4">
+                <h2 class="text-danger">Where Financial Risk Concentrates</h2>
+                <p class="takeaway">The "Tail Risk" of Student Loans.</p>
+                <div class="explanation-block">
+                    <p>While industry averages often look manageable, the right tail of the distribution reveals a high-risk zone dominated by for-profit entities. This suggests that the most extreme financial burdens are not evenly distributed but are instead concentrated in specific, volatile sectors of the education market.</p>
+                </div>
+            </div>
+            <div class="step" data-step="5">
+                <h2 class="text-danger">Claim: The Danger Zone Quadrant</h2>
+                <p class="takeaway">Visualizing institutional risk profiles.</p>
+                <div class="explanation-block">
+                    <p>The data highlights a "danger zone" of institutions that combine high debt with low completion rates, creating a high-probability environment for financial failure. This suggests that a degree's value is highly conditional on the specific institution's ability to move students through the pipeline efficiently.</p>
+                </div>
+            </div>
+        </div>
+        <div class="visual">
+            <div class="chart-box" id="chart-container">
+                <svg id="anti-svg"></svg>
+                <div class="tooltip" id="chart-tooltip"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+        const colors = { 
+            Public: "#2c7bb6",
+            "Private Nonprofit": "#88419d",
+            "For-Profit": "#d7191c",
+            danger: "#d7191c",
+            neutral: "#95a5a6"
+        };
+        const fDol = d3.format("$,.0f"), fK = d3.format("$.2s"), fPct = d3.format(".0%");
+        let dataDebt = [], dataAnnualChange = [], dataDelinq = [], dataColleges = [];
+
+        async function init() {
+            const [d, del, col] = await Promise.all([
+                d3.csv("data/debt.csv"), 
+                d3.csv("data/delinquencyrate.csv"), 
+                d3.csv("data/colleges.csv")
+            ]);
+            
+            dataDebt = d.map(v => ({ date: new Date(v.observation_date), val: +v.SLOAS }));
+            const yearlyAverages = d3.groups(dataDebt, d => d.date.getFullYear())
+                .map(([year, values]) => ({ year, avgSloas: d3.mean(values, v => v.val) }))
+                .sort((a, b) => a.year - b.year);
+            dataAnnualChange = yearlyAverages.map((d, i, arr) => i === 0 ? null : ({ year: d.year, change: d.avgSloas - arr[i-1].avgSloas, total: d.avgSloas })).filter(d => d);
+            dataDelinq = del.map(v => ({ date: new Date(v.date), val: +v.delinquencyRate }));
+            dataColleges = col.map(v => ({
+                name: v.INSTNM,
+                type: v.CONTROL == 1 ? "Public" : (v.CONTROL == 2 ? "Private Nonprofit" : "For-Profit"),
+                debt: +v.DEBT_MDN,
+                grad: +v.C150_4,
+                earn: +v.MD_EARN_WNE_P10,
+                ratio: +v.DEBT_MDN / (+v.MD_EARN_WNE_P10 || 1)
+            })).filter(v => v.debt > 0 && v.grad > 0 && v.earn > 0);
+
+            setupObserver();
+            draw(0);
+        }
+
+        function kernelDensityEstimator(kernel, x) {
+            return function(sample) {
+                return x.map(v => [v, d3.mean(sample, d => kernel(v - d))]);
+            };
+        }
+        function kernelEpanechnikov(k) {
+            return v => Math.abs(v /= k) <= 1 ? 0.75 * (1 - v * v) / k : 0;
+        }
+
+        function draw(step) {
+            const container = d3.select("#chart-container");
+            const fullW = container.node().clientWidth, fullH = container.node().clientHeight;
+            const margin = { top: 80, right: 60, bottom: 80, left: 140 };
+            const w = fullW - margin.left - margin.right, h = fullH - margin.top - margin.bottom;
+            
+            const svg = d3.select("#anti-svg").attr("width", fullW).attr("height", fullH);
+            svg.selectAll("*").remove();
+            const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+            const tooltip = d3.select("#chart-tooltip");
+
+            const addTitles = (title, sub) => {
+                svg.append("text").attr("class", "chart-title").attr("x", margin.left).attr("y", 35).text(title);
+                svg.append("text").attr("class", "chart-subtitle").attr("x", margin.left).attr("y", 55).text(sub);
+            };
+
+            const addAxes = (xl, yl) => {
+                g.append("text").attr("class", "axis-label").attr("x", w/2).attr("y", h + 45).attr("text-anchor", "middle").text(xl);
+                g.append("text").attr("class", "axis-label").attr("transform", "rotate(-90)").attr("y", -120).attr("x", -h/2).attr("text-anchor", "middle").text(yl);
+            };
+
+            if (step === 4) {
+                const threshold = 0.6;
+                const highRiskCount = dataColleges.filter(d => d.ratio > threshold).length;
+                const highRiskPct = d3.format(".1%")(highRiskCount / dataColleges.length);
+                addTitles("Where Financial Risk Concentrates", "Most institutions cluster at moderate debt levels, but the right tail reveals high-risk borrowing burdens.");
+                const categories = ["Public", "Private Nonprofit", "For-Profit"];
+                const x = d3.scaleLinear().domain([0, 1.8]).range([0, w]);
+                const y = d3.scaleBand().domain(categories).range([0, h]).padding(0.2); 
+                g.append("rect").attr("x", x(threshold)).attr("y", 0).attr("width", w - x(threshold)).attr("height", h).attr("fill", "#fee8e8").attr("opacity", 0.6);
+                g.append("text").attr("x", x(threshold) + 5).attr("y", 15).text("High Debt Burden Zone").style("font-size", "11px").style("fill", colors.danger).style("font-weight", "bold");
+                g.append("line").attr("x1", x(threshold)).attr("x2", x(threshold)).attr("y1", 0).attr("y2", h).attr("stroke", colors.danger).attr("stroke-dasharray", "4,4").attr("stroke-width", 2);
+                g.append("text").attr("x", x(threshold) - 5).attr("y", 15).attr("text-anchor", "end").text("Risk Threshold").style("font-size", "10px").style("fill", colors.danger);
+                g.append("text").attr("x", w - 10).attr("y", h - 10).attr("text-anchor", "end").style("font-weight", "bold").style("fill", colors.danger).text(`${highRiskPct} of institutions fall into high-risk borrowing territory`);
+                const kde = kernelDensityEstimator(kernelEpanechnikov(0.12), x.ticks(60));
+                const densityData = categories.map(cat => ({ key: cat, density: kde(dataColleges.filter(d => d.type === cat).map(d => d.ratio)) }));
+                const yDensity = d3.scaleLinear().domain([0, d3.max(densityData, d => d3.max(d.density, v => v[1]))]).range([y.bandwidth(), 0]);
+                const area = d3.area().curve(d3.curveBasis).x(d => x(d[0])).y0(y.bandwidth()).y1(d => yDensity(d[1]));
+                const ridges = g.selectAll(".ridge").data(densityData).enter().append("g").attr("transform", d => `translate(0, ${y(d.key)})`);
+                ridges.each(function(d) {
+                    const group = d3.select(this);
+                    group.append("path").attr("d", area(d.density)).attr("fill", colors[d.key]).attr("opacity", 0.45);
+                    const tailData = d.density.filter(v => v[0] >= threshold);
+                    if (tailData.length > 0) {
+                        group.append("path").datum(tailData).attr("d", area).attr("fill", colors[d.key]).attr("opacity", d.key === "For-Profit" ? 1 : 0.8).attr("stroke", d.key === "For-Profit" ? "#000" : "none").attr("stroke-width", 0.5);
+                    }
+                });
+                const legend = g.append("g").attr("transform", `translate(${w - 120}, 0)`);
+                categories.forEach((cat, i) => {
+                    const row = legend.append("g").attr("transform", `translate(0, ${i * 18})`);
+                    row.append("rect").attr("width", 12).attr("height", 12).attr("fill", colors[cat]);
+                    row.append("text").attr("x", 18).attr("y", 10).text(cat).style("font-size", "11px");
+                });
+                const fpY = y("For-Profit") + y.bandwidth() / 2;
+                g.append("path").attr("d", `M ${x(1.4)},${fpY - 25} L ${x(1.15)},${fpY - 5}`).attr("stroke", colors.danger).attr("stroke-width", 2).attr("fill", "none").attr("marker-end", "url(#arrowhead-anti)");
+                g.append("text").attr("class", "annotation").attr("x", x(1.4)).attr("y", fpY - 30).attr("text-anchor", "middle").text("For-profit institutions show a heavier concentration in high-risk regions.");
+                svg.append("defs").append("marker").attr("id", "arrowhead-anti").attr("viewBox", "0 0 10 10").attr("refX", 5).attr("refY", 5).attr("markerWidth", 6).attr("markerHeight", 6).attr("orient", "auto-start-reverse").append("path").attr("d", "M 0 0 L 10 5 L 0 10 z").attr("fill", colors.danger);
+                g.append("g").attr("transform", `translate(0,${h})`).call(d3.axisBottom(x).ticks(5));
+                g.append("g").call(d3.axisLeft(y).tickSize(0));
+                addAxes("Debt-to-Earnings Ratio", "Institution Type");
+            } else {
+                if (step === 0) {
+                    const x = d3.scaleTime().domain(d3.extent(dataDebt, d => d.date)).range([0, w]);
+                    const y = d3.scaleLinear().domain([0, d3.max(dataDebt, d => d.val)]).range([h, 0]);
+                    addTitles("Total Student Loan Debt Growth", "U.S. National Balance (2006-2024)");
+                    g.append("path").datum(dataDebt).attr("fill", "none").attr("stroke", colors.danger).attr("stroke-width", 2).attr("d", d3.line().x(d => x(d.date)).y(d => y(d.val)));
+                    g.append("g").attr("transform", `translate(0,${h})`).call(d3.axisBottom(x));
+                    g.append("g").call(d3.axisLeft(y).tickFormat(d => (d/1e6).toFixed(1) + "T"));
+                    addAxes("Year", "Debt ($ Trillions)");
+                } else if (step === 1) {
+                    const x = d3.scaleBand().domain(dataAnnualChange.map(d => d.year)).range([0, w]).padding(0.2);
+                    const y = d3.scaleLinear().domain([0, d3.max(dataAnnualChange, d => d.change)]).range([h, 0]);
+                    addTitles("Year-to-Year Student Debt Change", "Annual increase in average debt balance");
+                    g.selectAll("rect").data(dataAnnualChange).enter().append("rect").attr("x", d => x(d.year)).attr("y", d => y(d.change)).attr("width", x.bandwidth()).attr("height", d => h - y(d.change)).attr("fill", colors.danger);
+                    g.append("g").attr("transform", `translate(0,${h})`).call(d3.axisBottom(x).tickValues(x.domain().filter((d,i) => !(i%3))));
+                    g.append("g").call(d3.axisLeft(y).tickFormat(d => (d/1000).toFixed(0) + "B"));
+                    addAxes("Year", "Annual Change ($ Billions)");
+                } else if (step === 2) {
+                    const x = d3.scaleTime().domain(d3.extent(dataDelinq, d => d.date)).range([0, w]);
+                    const y = d3.scaleLinear().domain([0, d3.max(dataDelinq, d => d.val) * 1.1]).range([h, 0]);
+                    addTitles("Delinquency Rate", "Percentage of student loans 90+ days past due");
+                    g.append("path").datum(dataDelinq).attr("fill", "none").attr("stroke", colors.danger).attr("stroke-width", 2).attr("d", d3.line().x(d => x(d.date)).y(d => y(d.val)));
+                    g.append("g").attr("transform", `translate(0,${h})`).call(d3.axisBottom(x));
+                    g.append("g").call(d3.axisLeft(y).tickFormat(d => d + "%"));
+                    addAxes("Year", "Delinquency Rate (%)");
+                } else if (step === 3) {
+                    const x = d3.scaleLinear().domain([0, 40000]).range([0, w]);
+                    const y = d3.scaleLinear().domain([0, 1]).range([h, 0]);
+                    addTitles("Borrowing Without Completion", "Institutional concentration of debt vs. graduation success");
+                    const xBins = 10, yBins = 10;
+                    const binData = Array.from({length: xBins * yBins}, (_, i) => ({x: i % xBins, y: Math.floor(i / xBins), count: 0}));
+                    dataColleges.forEach(d => {
+                        let xb = Math.floor(x(d.debt) / (w/xBins)), yb = Math.floor((h-y(d.grad)) / (h/yBins));
+                        if(xb>=0 && xb<xBins && yb>=0 && yb<yBins) binData[yb*xBins + xb].count++;
+                    });
+                    const color = d3.scaleSequential(d3.interpolateYlOrRd).domain([0, d3.max(binData, d => d.count)]);
+                    g.selectAll("rect").data(binData).enter().append("rect").attr("x", d => d.x * (w/xBins)).attr("y", d => (yBins - 1 - d.y) * (h/yBins)).attr("width", w/xBins - 1).attr("height", h/yBins - 1).attr("fill", d => d.count > 0 ? color(d.count) : "#f8f8f8");
+                    g.append("g").attr("transform", `translate(0,${h})`).call(d3.axisBottom(x).tickFormat(fK));
+                    g.append("g").call(d3.axisLeft(y).tickFormat(fPct));
+                    addAxes("Median Debt", "Graduation Rate");
+                } else if (step === 5) {
+                    const x = d3.scaleLinear().domain([0, 50000]).range([0, w]);
+                    const y = d3.scaleLinear().domain([0, 1]).range([h, 0]);
+                    addTitles("Danger Zone Quadrant", "Median Debt vs. Graduation Rate");
+                    const medDebt = d3.median(dataColleges, d => d.debt), medGrad = d3.median(dataColleges, d => d.grad);
+                    g.append("line").attr("x1", x(medDebt)).attr("x2", x(medDebt)).attr("y1", 0).attr("y2", h).attr("stroke", "#666").attr("stroke-dasharray", "4,4");
+                    g.append("line").attr("x1", 0).attr("x2", w).attr("y1", y(medGrad)).attr("y2", y(medGrad)).attr("stroke", "#666").attr("stroke-dasharray", "4,4");
+                    g.selectAll("circle").data(dataColleges).enter().append("circle").attr("cx", d => x(d.debt)).attr("cy", d => y(d.grad)).attr("r", 3.5).attr("fill", d => (d.debt > medDebt && d.grad < medGrad) ? colors.danger : colors.neutral).attr("opacity", 0.6);
+                    g.append("g").attr("transform", `translate(0,${h})`).call(d3.axisBottom(x).tickFormat(fK));
+                    g.append("g").call(d3.axisLeft(y).tickFormat(fPct));
+                    addAxes("Median Debt", "Graduation Rate");
+                }
+            }
+        }
+
+        function setupObserver() {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        d3.selectAll(".step").classed("active", false);
+                        d3.select(entry.target).classed("active", true);
+                        draw(+entry.target.dataset.step);
+                    }
+                });
+            }, { threshold: 0.6 });
+            document.querySelectorAll(".step").forEach(step => observer.observe(step));
+        }
+        init();
+    </script>
+</body>
+</html>
